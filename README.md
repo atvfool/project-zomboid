@@ -1,6 +1,8 @@
 ⚠️ 
 
-Sorry, I have no more time to maintain this project and I no longer play ProjectZomboid to properly follow its progress. Feel free to fork this project and continue this work on your side.
+~~Sorry, I have no more time to maintain this project and I no longer play ProjectZomboid to properly follow its progress. Feel free to fork this project and continue this work on your side.~~
+
+I have forked this. No changes have been made so far as it all still seems to be working. 
 
 # Project Zomboid server - Docker image
 
