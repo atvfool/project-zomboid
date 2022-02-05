@@ -40,7 +40,7 @@ docker run -d --name project-zomboid \
               -p 16261:16261/udp \
               -p 16262-16272:16262-16272 \
               -p 27015:27015 \
-              ghcr.io/cyrale/project-zomboid
+              atvfool/project-zomboid
 ```
 
 #### Docker Compose
@@ -52,7 +52,7 @@ version: "3.7"
 
 services:
   project-zomboid:
-    image: ghcr.io/cyrale/project-zomboid
+    image: atvfool/project-zomboid
     restart: unless-stopped
     environment:
       SERVER_NAME: "pzserver"
@@ -79,7 +79,7 @@ docker run -d --name project-zomboid \
               -e SERVER_NAME="pzserver" \
               -e ADMIN_PASSWORD="pzserver-password" \
               -v $(pwd)/server-data:/server-data \
-              ghcr.io/cyrale/project-zomboid
+              atvfool/project-zomboid
 ```
 
 #### Docker Compose
@@ -91,7 +91,7 @@ version: "3.7"
 
 services:
   project-zomboid:
-    image: ghcr.io/cyrale/project-zomboid
+    image: atvfool/project-zomboid
     restart: unless-stopped
     environment:
       SERVER_NAME: "pzserver"
@@ -124,7 +124,7 @@ Some of options are not used in these two examples. Look below if you want to ad
 
 ## Variables
 
-Some variables are inherited from [cyrale/linuxgsm](https://github.com/cyrale/linuxgsm#variables).
+Some variables are inherited from [atvfool/linuxgsm](https://github.com/atvfool/linuxgsm#variables).
 
 - **STEAM_PORT_1** Steam port 1 (default: 8766)
 - **STEAM_PORT_2** Steam port 2 (default: 8767)
@@ -142,7 +142,7 @@ Some variables are inherited from [cyrale/linuxgsm](https://github.com/cyrale/li
 
 **STEAM_PORT_1**, **STEAM_PORT_2**, **RCON_PORT**, **RCON_PASSWORD**, **SERVER_PASSWORD**, **SERVER_PUBLIC_NAME**, **SERVER_PUBLIC_DESC** and **SERVER_PORT** are optional if you have access to the file `/server-data/Server/$SERVER_NAME.ini` where the values are.
 
-**SERVER_BRANCH**, **SERVER_BETA_PASSWORD** and **ADMIN_PASSWORD** are not used if these values are set by **LGSM_COMMON_CONFIG**, **LGSM_COMMON_CONFIG_FILE**, **LGSM_SERVER_CONFIG** or **LGSM_SERVER_CONFIG_FILE**. These 4 variables from [cyrale/linuxgsm](https://github.com/cyrale/linuxgsm#variables) can override default settings from LinuxGSM\_: [\_default.cfg](https://github.com/GameServerManagers/LinuxGSM/blob/master/lgsm/config-default/config-lgsm/pzserver/_default.cfg).
+**SERVER_BRANCH**, **SERVER_BETA_PASSWORD** and **ADMIN_PASSWORD** are not used if these values are set by **LGSM_COMMON_CONFIG**, **LGSM_COMMON_CONFIG_FILE**, **LGSM_SERVER_CONFIG** or **LGSM_SERVER_CONFIG_FILE**. These 4 variables from [atvfool/linuxgsm](https://github.com/atvfool/linuxgsm#variables) can override default settings from LinuxGSM\_: [\_default.cfg](https://github.com/GameServerManagers/LinuxGSM/blob/master/lgsm/config-default/config-lgsm/pzserver/_default.cfg).
 
 ## Volumes
 
